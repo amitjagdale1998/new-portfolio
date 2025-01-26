@@ -1,0 +1,74 @@
+/* Base Sidebar styles */
+.sidebar-container {
+    height: 100vh;
+    background-color: #3b82f6; /* Blue background */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 50;
+    overflow: hidden;
+    
+  }
+  
+  /* When Sidebar is collapsed */
+  .sidebar-container.collapsed {
+    width: 60px; /* Collapsed width */
+  }
+  
+  /* When Sidebar is expanded */
+  .sidebar-container.expanded {
+    width: 250px; /* Expanded width */
+  }
+  
+  /* Styles for buttons and links */
+  .sidebar-links {
+    padding: 0 10px;
+  }
+  
+  .sidebar-links .ant-btn {
+    margin: 10px 0;
+  }
+  
+  /* Profile picture and horizontal divider */
+  .sidebar-container .flex img {
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition for profile image */
+  }
+  
+  .sidebar-container .flex img,
+  .sidebar-container hr {
+    visibility: visible;
+  }
+  
+  .sidebar-container.collapsed .flex img {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .sidebar-container.collapsed hr {
+    visibility: hidden;
+  }
+  
+  /* Media Query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 100%; /* Full width on mobile */
+      height: 100vh;
+    }
+  
+    .sidebar-container.collapsed {
+      width: 40px; /* Fully collapse sidebar on mobile */
+    }
+  
+    .sidebar-container.expanded {
+      width: 100%; /* Fully expand sidebar on mobile */
+    }
+  }
+  
+
+
+  .shadow-class
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

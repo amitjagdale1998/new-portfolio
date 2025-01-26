@@ -1,0 +1,64 @@
+/* Basic layout */
+.sidebar {
+    width: 250px; /* Default width of sidebar */
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Default position, expanded */
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Offset for sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* For small screens, the sidebar should be collapsible */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      position: fixed;
+      transform: translateX(-100%); /* Hide sidebar off-screen initially */
+    }
+  
+    .main-content {
+      margin-left: 0; /* No margin when sidebar is hidden */
+      padding: 10px;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0); /* When sidebar is open, bring it back */
+    }
+  
+    /* The toggle button for mobile */
+    .sidebar-toggle-button {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10; /* Ensure the button is above content */
+    }
+  
+    .sidebar ul {
+      padding: 0;
+      list-style-type: none;
+    }
+  
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+  }
+  
+  /* Flexbox layout */
+  .flex {
+    display: flex;
+  }
+  
