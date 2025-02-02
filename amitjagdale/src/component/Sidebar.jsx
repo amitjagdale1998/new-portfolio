@@ -1,78 +1,98 @@
 import { Button, Flex } from "antd";
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Use 'react-router-dom' instead of 'react-router'
+import { NavLink } from "react-router-dom"; // Use NavLink
 import Home from "./pages/Home";
 import About from "./pages/About";
 import "./Sidebar.css";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'; // Ant Design icons for collapsible button
+import { CloseOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import IconHome from "./icons/IconHome";
 
 export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(true); // State to handle collapse/expand
+  const [collapsed, setCollapsed] = useState(true);
 
   const toggleCollapse = () => {
-    setCollapsed(prevCollapsed => !prevCollapsed); // Toggle state
+    setCollapsed(prevCollapsed => !prevCollapsed);
   };
 
   return (
-    <div className={`sidebar-container shadow-class  ${collapsed ? 'collapsed' : 'expanded'}`} >
+    <div className={`sidebar-container shadow-class ${collapsed ? 'collapsed' : 'expanded'}`}>
+      {!collapsed && (
+        <div className="flex justify-end" onClick={toggleCollapse}>
+          <CloseOutlined className="close-icon px-5 cursor-pointer" />
+        </div>
+      )}
       <div className="flex justify-between items-center p-5">
-        <Button
-          type="text"
-          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={toggleCollapse}
-          style={{ fontSize: '18px' }}
-        />
+        {collapsed && (
+          <Button
+            type="text"
+            icon={<MenuUnfoldOutlined />}
+            onClick={toggleCollapse}
+            style={{ fontSize: '18px' }}
+          />
+        )}
         {!collapsed && (
           <img
-            src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600"
-            className="rounded-full h-[60px] w-[60px]"
+            src="https://images.pexels.com/photos/450212/pexels-photo-450212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className="profile-image rounded-full h-[186px] w-[186px]"
             alt="Profile"
           />
         )}
       </div>
 
-      {!collapsed && <hr className="text-blue-300 bg-white w-full h-[2px]" />}
+      {!collapsed && <hr className="deepseek-hr" />}
 
       <div className={`sidebar-links ${collapsed ? 'hidden' : 'block'}`}>
         <Flex
           gap="small"
-          className="flex flex-col justify-center"
+          className="flex flex-col justify-center pt-4"
           style={{
             flexDirection: "column",
             alignItems: "center",
             width: "100%",
             borderRadius: "0px",
+            marginTop: "20px"
           }}
         >
-          <Button
-            type="primary"
-            className="w-[95%]"
-            style={{ height: "40px" }}
-          >
-            <Link to="/home" exact component={<Home />}>
+          <div className="w-full text-center h-10 justify-center items-center my-auto align-middle rounded" onClick={toggleCollapse}>
+            <NavLink
+              to="/home"
+              className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}
+            >
               Home
-            </Link>
-          </Button>
-          <Button type="primary" className="w-[95%]">
-            <Link to="/about" exact component={<About />}>
-             About
-            </Link>
-          </Button>
-          <Button type="primary" className="w-[95%]">
-          <Link to="/portfolios" exact component={<About />}>
-             Portfolios
-            </Link>
-          </Button>
-          <Button type="primary" className="w-[95%]">
-          <Link to="/blogs" exact component={<About />}>
-             Blogs
-            </Link>
-          </Button>
-          <Button type="primary" className="w-[95%]">
-          <Link to="/contact" exact component={<About />}>
-             Contact
-            </Link>
-          </Button>
+            </NavLink>
+          </div>
+          <div className="w-[95%] text-center items-center" onClick={toggleCollapse}>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}
+            >
+              About
+            </NavLink>
+          </div>
+          <div className="w-[95%] text-center items-center" onClick={toggleCollapse}>
+            <NavLink
+              to="/portfolios"
+              className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}
+            >
+              Portfolios
+            </NavLink>
+          </div>
+          <div className="w-[95%] text-center items-center" onClick={toggleCollapse}>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}
+            >
+              Blogs
+            </NavLink>
+          </div>
+          <div className="w-[95%] text-center items-center" onClick={toggleCollapse}>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}
+            >
+              Contact
+            </NavLink>
+          </div>
         </Flex>
       </div>
     </div>

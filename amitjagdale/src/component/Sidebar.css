@@ -1,74 +1,152 @@
-/* Base Sidebar styles */
 .sidebar-container {
-    height: 100vh;
-    background-color: #3b82f6; /* Blue background */
-    transition: width 0.3s ease-in-out; /* Smooth transition for width */
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    position: fixed;
-    z-index: 50;
-    overflow: hidden;
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a1f3d 0%, #1a3a6e 100%); /* Deepseek blue gradient */
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.sidebar-container.collapsed {
+  width: 60px;
+}
+
+.sidebar-container.expanded {
+  width: 250px;
+}
+
+.sidebar-container .ant-btn {
+  color: white;
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-container .ant-btn:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-links {
+  padding: 20px;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.active-link {
+  background: rgba(255, 255, 255, 0.2); /* Light background for active link */
+  color: #ff6b6b; /* Deepseek accent color for active link */
+  font-weight: bold; /* Bold text for active link */
+  border-left: 4px solid #ff6b6b; /* Left border for active link */
+  padding-left: 11px; /* Adjust padding to account for the border */
+}
+
+/* Hover effect for links */
+.sidebar-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.sidebar-links a:hover {
+  background: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  transform: translateX(10px);
+}
+
+.sidebar-links a span {
+  margin-left: 10px;
+}
+
+.profile-image {
+  border: 3px solid white;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.close-icon {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #ff6b6b; /* Deepseek accent color for hover */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
   }
-  
-  /* When Sidebar is collapsed */
-  .sidebar-container.collapsed {
-    width: 60px; /* Collapsed width */
+  to {
+    transform: translateX(0);
   }
-  
-  /* When Sidebar is expanded */
-  .sidebar-container.expanded {
-    width: 250px; /* Expanded width */
-  }
-  
-  /* Styles for buttons and links */
-  .sidebar-links {
-    padding: 0 10px;
-  }
-  
-  .sidebar-links .ant-btn {
-    margin: 10px 0;
-  }
-  
-  /* Profile picture and horizontal divider */
-  .sidebar-container .flex img {
-    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition for profile image */
-  }
-  
-  .sidebar-container .flex img,
-  .sidebar-container hr {
-    visibility: visible;
-  }
-  
-  .sidebar-container.collapsed .flex img {
-    visibility: hidden;
-    opacity: 0;
-  }
-  
-  .sidebar-container.collapsed hr {
-    visibility: hidden;
-  }
-  
-  /* Media Query for mobile responsiveness */
-  @media (max-width: 768px) {
-    .sidebar-container {
-      width: 100%; /* Full width on mobile */
-      height: 100vh;
-    }
-  
-    .sidebar-container.collapsed {
-      width: 40px; /* Fully collapse sidebar on mobile */
-    }
-  
-    .sidebar-container.expanded {
-      width: 100%; /* Fully expand sidebar on mobile */
-    }
-  }
-  
+}
+
+.sidebar-container.expanded {
+  animation: slideIn 0.3s ease;
+}
+
+/* Deepseek-themed button */
+.deepseek-button {
+  background: linear-gradient(135deg, #1a3a6e 0%, #0a1f3d 100%); /* Deepseek gradient */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deepseek-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+}
+
+/* Deepseek-themed hr */
+.deepseek-hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  margin: 20px 0;
+}
 
 
-  .shadow-class
-  {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+/* Inactive link styles */
+.inactive-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Active link styles */
+.active-link {
+  background: rgba(255, 255, 255, 0.2); /* Light background for active link */
+  color: #ff6b6b; /* Deepseek accent color for active link */
+  font-weight: bold; /* Bold text for active link */
+  border-left: 4px solid #ff6b6b; /* Left border for active link */
+  padding-left: 11px; /* Adjust padding to account for the border */
+}
+
+/* Hover effect for links */
+.sidebar-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(0px);
+}
+/* Active link styles */
