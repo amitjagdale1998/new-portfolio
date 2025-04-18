@@ -1,0 +1,12 @@
+runtime: nodejs20
+
+handlers:
+  # Serve static assets (JS, CSS, images, etc.)
+  - url: /(.*\.(js|css|ico|png|jpg|svg|json|txt|html))$
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|ico|png|jpg|svg|json|txt|html)
+
+  # Serve index.html for all other routes (for React Router)
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
