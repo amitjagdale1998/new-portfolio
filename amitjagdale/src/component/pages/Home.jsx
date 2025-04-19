@@ -35,7 +35,7 @@ function Home() {
           Hi, I’m <span class="text-blue-500">Amit Jagdale</span>
         </h1>
 
-        <p class="text-lg text-gray-400 leading-relaxed mb-6">
+        <p class="text-lg text-white leading-relaxed mb-6">
           A passionate{" "}
           <span class="text-blue-500 font-semibold">Full Stack Developer</span>{" "}
           with{" "}
@@ -85,9 +85,9 @@ function Home() {
         <h2 class="text-3xl font-bold text-blue-900 mt-8 mb-4">
           Technologies I Work With:
         </h2>
-        <div className="h-fit border border-white rounded flex flex-col md:flex-row justify-between p-2 mb-2">
-          <div className="flex flex-col items-center justify-center w-1/2 md:w-auto">
-            <div className="text-white flex gap-2  items-center">
+        <div className="h-fit border border-white items-center rounded flex flex-col md:flex-row justify-between p-2 mb-2">
+          <div className="flex flex-col items-center justify-center w-full  md:w-auto">
+            <div className="text-white flex gap-2  items-center ">
               <IconReact /> React
             </div>
             <div>
@@ -104,8 +104,8 @@ function Home() {
             </div>
           </div>
           <div className="border-l border-white w-auto mx-2 justify-center   "></div>
-          <div className="flex flex-col  items-center justify-center w-1/2 md:w-auto">
-            <div className="text-white flex gap-2  items-center">
+          <div className="flex flex-col  items-center justify-center w-full md:w-auto">
+            <div className="text-white flex gap-2  items-center justify-center">
               <IconVue /> Vue.js
             </div>
             <div>
@@ -122,9 +122,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="h-fit border border-white rounded flex flex-col md:flex-row justify-between p-2 mb-2">
-          <div className="flex flex-col items-center justify-center w-1/2 md:w-auto">
-            <div className="text-white flex gap-2  items-center">
+        <div className="h-fit border border-white rounded items-center flex flex-col md:flex-row justify-between p-2 mb-2">
+          <div className="flex flex-col items-center justify-center w-full md:w-auto">
+            <div className="text-white flex gap-2  items-center justify-center">
               <IconNode /> Express.JS
             </div>
             <div>
@@ -140,9 +140,9 @@ function Home() {
               me confident in delivering reliable web applications."
             </div>
           </div>
-          <div className="border-l border-white w-auto mx-2 justify-center   "></div>
-          <div className="flex flex-col  items-center justify-center w-1/2 md:w-auto">
-            <div className="text-white flex gap-2  items-center">
+          <div className="border-l border-white w-auto justify-center   "></div>
+          <div className="flex flex-col  items-center justify-center w-full md:w-auto">
+            <div className="text-white flex gap-2  items-center justify-center">
               <IconJAvascript /> Javascript
             </div>
             <div>
