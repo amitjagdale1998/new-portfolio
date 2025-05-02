@@ -1,0 +1,8 @@
+○ docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: inactive (dead)
+TriggeredBy: [0;1;31m×[0m docker.socket
+       Docs: https://docs.docker.com
+
+May 01 12:00:49 amit-HP-EliteBook-840-G5 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mDependency failed for Docker Application Container Engine.[0m
+May 01 12:00:49 amit-HP-EliteBook-840-G5 systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.service: Job docker.service/start failed with result 'dependency'.[0m
