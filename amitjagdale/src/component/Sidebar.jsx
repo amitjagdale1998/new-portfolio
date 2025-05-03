@@ -36,7 +36,7 @@ export default function Sidebar() {
         )}
         {!collapsed && (
           <img
-            src="https://images.pexels.com/photos/450212/pexels-photo-450212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="public/myimage.jpg"
             className="profile-image rounded-full h-[186px] w-[186px]"
             alt="Profile"
           />

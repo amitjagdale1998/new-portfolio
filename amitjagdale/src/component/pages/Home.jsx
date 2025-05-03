@@ -19,7 +19,7 @@ function Home() {
   }
   return (
     <div className=" p-4  first-page demo-1   justify-center  text-center w-full  ">
-      <div className="font-extrabold text-3xl text-blue-50">
+      <div className="font-extrabold text-3xl text-blue-50 animate-jump-in">
         &lt;
         <span className="cursor-pointer" onClick={Reload}>
           AmitJagdale
