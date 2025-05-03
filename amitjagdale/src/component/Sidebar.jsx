@@ -74,40 +74,40 @@ export default function Sidebar() {
             className="w-[95%] text-center items-center"
             onClick={toggleCollapse}
           >
-            <NavLink
+            {/* <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive ? "active-link" : "inactive-link"
               }
             >
               About
-            </NavLink>
+            </NavLink> */}
           </div>
           <div
             className="w-[95%] text-center items-center"
             onClick={toggleCollapse}
           >
-            <NavLink
+            {/* <NavLink
               to="/portfolios"
               className={({ isActive }) =>
                 isActive ? "active-link" : "inactive-link"
               }
             >
               Portfolios
-            </NavLink>
+            </NavLink> */}
           </div>
           <div
             className="w-[95%] text-center items-center"
             onClick={toggleCollapse}
           >
-            <NavLink
+            {/* <NavLink
               to="/blogs"
               className={({ isActive }) =>
                 isActive ? "active-link" : "inactive-link"
               }
             >
               Blogs
-            </NavLink>
+            </NavLink> */}
           </div>
           <div
             className="w-[95%] text-center items-center"
@@ -126,14 +126,14 @@ export default function Sidebar() {
             className="w-[95%] text-center items-center"
             onClick={toggleCollapse}
           >
-            <NavLink
+            {/* <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "active-link" : "inactive-link"
               }
             >
               Contact
-            </NavLink>
+            </NavLink> */}
           </div>
         </Flex>
       </div>
