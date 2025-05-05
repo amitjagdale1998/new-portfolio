@@ -30,7 +30,7 @@ export default function Resume() {
           <div className=" font-normal text-[14px]"> {data.profile}</div>
           <div className="mt-10 text-black  space-y-1.5">
             <div className="w-[80%] bg-white p-2 rounded-sm">+919822193468</div>
-            <div className="w-[80%] bg-white p-2 rounded-sm">
+            <div className="w-[80%] bg-white p-2 rounded-sm break-words">
               amitjagdale1998@gmail.com
             </div>
             <div className="w-[80%] bg-white p-2 rounded-sm">
@@ -64,13 +64,26 @@ export default function Resume() {
             <div className=" font-bold text-2xl  mt-10">
               Links and Credentials
             </div>
-            {data.links.map((items) => {
-              return (
-                <>
-                  <li>{items.name}</li>
-                </>
-              );
-            })}
+            <ul>
+              {data.links.map((items) => {
+                return (
+                  <>
+                    <li>
+                      <a
+                        href={items.link}
+                        className="flex cursor-pointer flex-row col items-center justify-start gap-2 mb-3 hover:text-[blue]"
+                      >
+                        <img
+                          src={items.logo}
+                          className="h-[30px] w-[30px]"
+                        ></img>
+                        <div>{items.name}</div>
+                      </a>
+                    </li>
+                  </>
+                );
+              })}
+            </ul>
           </div>
         </div>
 

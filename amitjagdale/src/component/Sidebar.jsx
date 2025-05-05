@@ -36,7 +36,7 @@ export default function Sidebar() {
         )}
         {!collapsed && (
           <img
-            src="public/myimage.jpg"
+            src="/myimage.jpg"
             className="profile-image rounded-full h-[186px] w-[186px]"
             alt="Profile"
           />
@@ -126,14 +126,14 @@ export default function Sidebar() {
             className="w-[95%] text-center items-center"
             onClick={toggleCollapse}
           >
-            {/* <NavLink
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "active-link" : "inactive-link"
               }
             >
               Contact
-            </NavLink> */}
+            </NavLink>
           </div>
         </Flex>
       </div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Instagram" role="img" viewBox="0 0 512 512" height="26" width="26">
+
+<rect width="512" height="512" rx="15%" id="b"/>
+
+<use fill="url(#a)" xlink:href="#b" id="element_64c93407"/>
+
+<use fill="url(#c)" xlink:href="#b" id="element_9cbdfa9d"/>
+
+<radialGradient id="a" cx=".4" cy="1" r="1">
+
+<stop offset=".1" stop-color="#fd5" id="element_4445ccb8"/>
+
+<stop offset=".5" stop-color="#ff543e" id="element_e58beb2f"/>
+
+<stop offset="1" stop-color="#c837ab" id="element_1692984f"/>
+
+</radialGradient>
+
+<linearGradient id="c" x2=".2" y2="1">
+
+<stop offset=".1" stop-color="#3771c8" id="element_9bc03beb"/>
+
+<stop offset=".5" stop-color="#60f" stop-opacity="0" id="element_061deafd"/>
+
+</linearGradient>
+
+<g fill="none" stroke="#ffffff" stroke-width="30" id="element_8dcd7eaa">
+
+<rect width="308" height="308" x="102" y="102" rx="81" id="element_904519ee"/>
+
+<circle cx="256" cy="256" r="72" id="element_5419cec7"/>
+
+<circle cx="347" cy="165" r="6" id="element_fc285a6d"/>
+
+</g>
+
+</svg>
